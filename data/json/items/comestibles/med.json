@@ -61,7 +61,7 @@
     "stack_size": 200,
     "symbol": "!",
     "color": "white",
-    "use_action": "ANTIBIOTIC",
+    "use_action": "STRONG_ANTIBIOTIC",
     "flags": "NPC_SAFE"
   },
   {
@@ -1326,7 +1326,7 @@
     "symbol": "!",
     "color": "white",
     "healthy": -2,
-    "use_action": "WEAK_ANTIBIOTIC",
+    "use_action": "ANTIBIOTIC",
     "flags": "NPC_SAFE"
   },
   {

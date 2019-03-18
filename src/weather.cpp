@@ -392,6 +392,12 @@ void wet_player( int amount )
         drenched_parts |= { { bp_leg_l, bp_leg_r } };
     }
 
+	for (const body_part bp : all_body_parts) {
+		if (g->u.covered_with_flag("neoprene_padded", { bp })) {
+			drenched_parts.reset(bp);
+		}
+	}
+
     g->u.drench( amount, drenched_parts, false );
 }
 

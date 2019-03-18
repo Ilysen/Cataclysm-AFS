@@ -1530,13 +1530,13 @@ int iuse::sew_advanced( player *p, item *it, bool, const tripoint & )
 
     // TODO: Wrap all the mods into structs, maybe even json-able
     // All possible mods here
-    std::array<std::string, 4> clothing_mods{
-        { "wooled", "furred", "leather_padded", "kevlar_padded" }
+    std::array<std::string, 5> clothing_mods{
+        { "wooled", "furred", "leather_padded", "kevlar_padded", "neoprene_padded" }
     };
 
     // Materials those mods use
-    std::array<std::string, 4> mod_materials{
-        { "felt_patch", "fur", "leather", "kevlar_plate" }
+    std::array<std::string, 5> mod_materials{
+        { "felt_patch", "fur", "leather", "kevlar_plate", "neoprene" }
     };
 
     // Cache available materials
@@ -1549,7 +1549,7 @@ int iuse::sew_advanced( player *p, item *it, bool, const tripoint & )
     }
 
     const int mod_count = mod.item_tags.count( "wooled" ) + mod.item_tags.count( "furred" ) +
-                          mod.item_tags.count( "leather_padded" ) + mod.item_tags.count( "kevlar_padded" );
+                          mod.item_tags.count( "leather_padded" ) + mod.item_tags.count( "kevlar_padded" ) + mod.item_tags.count("neoprene_padded");
 
     // We need extra thread to lose it on bad rolls
     const int thread_needed = mod.volume() / 125_ml + 10;
@@ -1600,10 +1600,17 @@ int iuse::sew_advanced( player *p, item *it, bool, const tripoint & )
                     mod.bash_resist(), mod.cut_resist(), temp_item.bash_resist(), temp_item.cut_resist(),
                     mod.get_encumber( *p ), temp_item.get_encumber( *p ) );
 
+	temp_item = modded_copy(mod, "neoprene_padded");
+	enab = can_add_mod("neoprene_padded", "neoprene");
+	tmenu.addentry(4, enab, MENU_AUTOASSIGN, _("%s (Makes rainproof, Encumbrance: %d->%d)"),
+		mod.item_tags.count("neoprene_padded") == 0 ? _("Pad with neoprene") :
+		_("Destroy neoprene padding"),
+		mod.get_encumber(*p), temp_item.get_encumber(*p));
+
     tmenu.query();
     const int choice = tmenu.ret;
 
-    if( choice < 0 || choice > 3 ) {
+    if( choice < 0 || choice > 4 ) {
         return 0;
     }
 

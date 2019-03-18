@@ -318,8 +318,13 @@
     "id": "RAINPROOF",
     "type": "json_flag",
     "context": [ "ARMOR", "TOOL_ARMOR" ],
-    "description": "Prevents the covered body-part(s) from getting wet in the rain.",
-    "info": "This piece of clothing is designed to keep you <info>dry</info> in the rain."
+    "info": "This piece of clothing <info>protects the whole body</info> from the rain."
+  },
+  {
+    "id": "RAINPROOF_PARTIAL",
+    "type": "json_flag",
+    "context": [ "ARMOR", "TOOL_ARMOR" ],
+    "info": "This piece of clothing <info>protects its covered parts</info> from the rain."
   },
   {
     "id": "RESTRICT_HANDS",

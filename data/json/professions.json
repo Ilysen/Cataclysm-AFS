@@ -3066,7 +3066,17 @@
     "points": 2,
     "skills": [ { "level": 5, "name": "computer" } ],
     "items": {
-      "both": [ "laptop", "software_useless", "eink_tablet_pc", "linuxtshirt", "pants_cargo", "socks", "slingpack", "sneakers", "smart_phone" ],
+      "both": [
+        "laptop",
+        "software_useless",
+        "eink_tablet_pc",
+        "linuxtshirt",
+        "pants_cargo",
+        "socks",
+        "slingpack",
+        "sneakers",
+        "smart_phone"
+      ],
       "male": [ "briefs" ],
       "female": [ "bra", "panties" ]
     }
@@ -3132,7 +3142,8 @@
       "male": [ "briefs", "collarpin", "diamond_ring" ],
       "female": [ "panties", "hairpin", "pearl_collar" ]
     }
-  },  {
+  },
+  {
     "type": "profession",
     "ident": "atomic_pitchman",
     "name": { "male": "Atomic Pitchman", "female": "Atomic Pitchwoman" },
@@ -3155,5 +3166,14 @@
       "male": [ "briefs" ],
       "female": [ "bra", "panties" ]
     }
+  },
+  {
+    "type": "profession",
+    "ident": "circus_strongman",
+    "name": { "male": "Circus Strongman", "female": "Circus Strongwoman" },
+    "description": "You were born with a genetic defect that made your body unnaturally strong.  Your life was strange and multifaceted, and ultimately, you ended up traveling with a troupe up and down the coastline, putting on shows of strength  (NOTE: To preserve balance, choose this profession *before* adjusting your stats.  Or don't.  I'm a description, not a cop.)",
+    "points": 2,
+    "traits": [ "PROF_STRONGMAN" ],
+    "items": { "both": [ "b_shorts", "undershirt" ], "male": [ "briefs" ], "female": [ "boy_shorts" ] }
   }
 ]

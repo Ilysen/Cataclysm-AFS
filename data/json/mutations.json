@@ -5962,6 +5962,17 @@
     "valid": false,
     "purifiable": false,
     "profession": true
+  },  
+  {
+    "type": "mutation",
+    "id": "PROF_STRONGMAN",
+    "name": "Brutal Strength",
+    "description": "Genetic defects have made your body incredibly strong.  Strength + 7.",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "passive_mods": { "str_mod": 7 }
   },
   {
     "type": "mutation",

@@ -1,10 +1,5 @@
 [
   {
-    "id": "grenades",
-    "type": "item_group",
-    "items": [ [ "granade", 1 ] ]
-  },
-  {
     "id": "skeltal_drops",
     "type": "item_group",
     "subtype": "distribution",

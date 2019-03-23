@@ -200,6 +200,7 @@ static const bionic_id bio_itchy( "bio_itchy" );
 static const bionic_id bio_laser( "bio_laser" );
 static const bionic_id bio_leaky( "bio_leaky" );
 static const bionic_id bio_lighter( "bio_lighter" );
+static const bionic_id bio_linguistic_coprocessor( "bio_linguistic_coprocessor" );
 static const bionic_id bio_membrane( "bio_membrane" );
 static const bionic_id bio_memory( "bio_memory" );
 static const bionic_id bio_metabolics( "bio_metabolics" );
@@ -3009,6 +3010,9 @@ int player::read_speed( bool return_stat_effect ) const
     }
     if( has_trait( trait_PROF_DICEMASTER ) ) {
         ret *= .9;
+    }
+    if( has_bionic( bio_linguistic_coprocessor ) ) {
+        ret *= .85;
     }
 
     if( has_trait( trait_SLOWREADER ) ) {

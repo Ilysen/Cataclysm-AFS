@@ -261,7 +261,7 @@ void main_menu::init_strings()
     vMenuItems.clear();
     vMenuItems.push_back( pgettext( "Main Menu", "<M|m>OTD" ) );
     vMenuItems.push_back( pgettext( "Main Menu", "<N|n>ew Game" ) );
-    vMenuItems.push_back( pgettext( "Main Menu", "Lo<a|A>d" ) );
+    vMenuItems.push_back( pgettext( "Main Menu", "Lo<a|A>d Game" ) );
     vMenuItems.push_back( pgettext( "Main Menu", "<W|w>orld" ) );
     vMenuItems.push_back( pgettext( "Main Menu", "<S|s>pecial" ) );
     vMenuItems.push_back( pgettext( "Main Menu", "Se<t|T>tings" ) );

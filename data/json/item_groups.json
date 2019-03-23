@@ -592,6 +592,7 @@
       ["food_processor", 30 ],
       ["eclipse_glasses", 1],
       ["thermos", 15],
+      ["atompot", 2],
       {"item": "meat_canned", "prob":  4, "charges": 12, "container-item": "jar_3l_glass_sealed"},
       {"item": "veggy_canned", "prob":  4, "charges": 12, "container-item": "jar_3l_glass_sealed"},
       {"item": "apple_canned", "prob":  4, "charges": 12, "container-item": "jar_3l_glass_sealed"},
@@ -791,7 +792,8 @@
       ["pot", 80],
       ["pot_copper", 20],
       ["pot_canning", 15],
-      ["pressure_cooker", 5]
+      ["pressure_cooker", 5],
+      ["atompot", 2]
     ]
   },{
     "type" : "item_group",
@@ -2911,7 +2913,8 @@
       ["tights", 20],
       ["arm_warmers", 20],
       ["leg_warmers", 20],
-      ["balclava", 15]
+      ["balclava", 15],
+      ["ski_jacket", 40]
     ]
   },{
     "type" : "item_group",
@@ -3224,7 +3227,8 @@
       ["robe", 5],
       ["eboshi", 1],
       ["kariginu", 1],
-      ["kimono", 3]
+      ["kimono", 3],
+      ["ski_jacket", 40]
     ]
   },{
     "type" : "item_group",
@@ -3540,7 +3544,11 @@
       ["textbook_weapeast", 3],
       ["textbook_armwest", 3],
       ["textbook_armeast", 3],
-      ["survnote", 2]
+      ["survnote", 2],
+      [ "textbook_shotguns", 3 ],
+      [ "textbook_handguns", 3 ],
+      [ "textbook_rifles", 3 ],
+      [ "textbook_launchers", 3 ]
     ]
   },
   {
@@ -5327,7 +5335,8 @@
       ["bootsheath", 5],
       ["holster", 4],
       ["survnote", 2],
-      ["bodypillow", 1]
+      ["bodypillow", 1],
+      ["ski_jacket", 20]
     ]
   },{
     "type" : "item_group",
@@ -5533,7 +5542,9 @@
       ["chem_nitric_acid", 15],
       ["chem_chromium_oxide", 10],
       ["chem_zinc_powder", 10],
-      ["denat_alcohol", 10]
+      ["denat_alcohol", 10],
+      ["calorie_pill", 8],
+      ["sundew", 5]
     ]
   },{
     "type" : "item_group",
@@ -5578,7 +5589,8 @@
       ["meat_tainted", 8],
       ["veggy_tainted", 4],
       ["slime_scrap", 8],
-      ["chem_nitric_acid", 5]
+      ["chem_nitric_acid", 5],
+      ["sundew", 2]
     ]
   },{
     "type" : "item_group",
@@ -5636,6 +5648,7 @@
       ["helmet_riot", 25],
       ["lighter", 60],
       ["boots_rubber", 20],
+      ["calorie_pill", 10],
       ["recipe_medicalmut", 2],
       ["canister_goo", 8],
       ["canister_goo", 8],
@@ -5680,7 +5693,9 @@
       ["rag_bloody", 1],
       ["chem_nitric_acid", 10],
       ["chem_hydrogen_peroxide_conc", 10],
-      ["denat_alcohol", 10]
+      ["denat_alcohol", 10],
+      ["calorie_pill", 10],
+      ["sundew", 5]
     ]
   },{
     "type" : "item_group",
@@ -5953,7 +5968,8 @@
       ["hygrometer", 3],
       ["barometer", 3],
       ["dnd_handbook", 2],
-      ["bodypillow", 1]
+      ["bodypillow", 1],
+      ["atomic_smartphone", 5]
     ]
   },{
     "type" : "item_group",
@@ -6059,7 +6075,12 @@
       ["bio_cable", 10],
       ["bio_syringe", 10],
       ["bio_weight", 10],
-      ["bio_shock_absorber", 10]
+      ["bio_shock_absorber", 10],
+      ["bio_precision_solderers", 10],
+      ["bio_dopamine_stimulators", 10],
+      ["bio_linguistic_coprocessor", 10],
+      ["bio_grenade_launcher", 10],
+      ["bio_solar_panels", 10]
     ]
   },{
     "type" : "item_group",
@@ -6080,7 +6101,8 @@
       ["bio_furnace", 10],
       ["bio_watch", 10],
       ["bio_torsionratchet", 10],
-      ["bio_cable", 10]
+      ["bio_cable", 10],
+      ["bio_solar_panels", 10]
     ]
   },{
     "type" : "item_group",
@@ -6431,7 +6453,8 @@
       ["bio_power_armor_interface_mkII", 5],
       ["bio_meteorologist", 10],
       ["bio_cable", 10],
-      ["bio_weight", 10]
+      ["bio_weight", 10],
+      ["bio_grenade_launcher", 10]
     ]
   },{
       "type" : "item_group",
@@ -6496,7 +6519,9 @@
       ["bio_watch", 10],
       ["bio_power_armor_interface_mkII", 5],
       ["bio_meteorologist", 10],
-      ["bio_cable", 10]
+      ["bio_cable", 10],
+      ["bio_grenade_launcher", 10],
+      ["bio_dopamine_stimulators", 10]
     ]
   },{
     "type" : "item_group",
@@ -7645,7 +7670,8 @@
       ["bot_manhack", 1],
       ["bot_grenade_hack", 1],
       ["l-stick", 1],
-      ["solarpack", 2]
+      ["solarpack", 2],
+      ["calorie_pill", 5]
     ]
   },{
     "type" : "item_group",
@@ -9136,7 +9162,8 @@
       ["bio_chain_lightning", 15],
       ["bio_adrenaline", 20],
       ["bio_ods", 10],
-      ["bio_weight", 15]
+      ["bio_weight", 15],
+      ["bio_dopamine_stimulators", 20]
     ]
   },{
     "type" : "item_group",

@@ -1241,7 +1241,7 @@
     "difficulty": 3,
     "time": 20000,
     "reversible": true,
-    "book_learn": [ [ "recipe_caseless", 6 ] ],
+    "book_learn": [ [ "recipe_caseless", 3 ], [ "recipe_lab_cvd", 3 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
     "components": [
       [ [ "plastic_chunk", 1 ] ],
@@ -1260,7 +1260,7 @@
     "difficulty": 3,
     "time": 30000,
     "reversible": true,
-    "book_learn": [ [ "recipe_caseless", 6 ] ],
+    "book_learn": [ [ "recipe_caseless", 3 ], [ "recipe_lab_cvd", 3 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
     "components": [
       [ [ "plastic_chunk", 2 ] ],
@@ -1279,7 +1279,7 @@
     "difficulty": 4,
     "time": 3000,
     "reversible": true,
-    "book_learn": [ [ "recipe_caseless", 8 ] ],
+    "book_learn": [ [ "recipe_caseless", 4 ], [ "recipe_lab_cvd", 4 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
     "components": [
       [ [ "plastic_chunk", 5 ] ],
@@ -1666,7 +1666,7 @@
     "time": 360000,
     "reversible": true,
     "decomp_learn": 10,
-    "book_learn": [ [ "recipe_atomic_battery", 5 ], [ "recipe_mininuke_launch", 5 ] ],
+    "book_learn": [ [ "recipe_atomic_battery", 5 ], [ "recipe_mininuke_launch", 5 ], [ "recipe_lab_cvd", 5 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
     "components": [
       [ [ "canister_empty", 1 ] ],
@@ -1687,7 +1687,7 @@
     "skills_required": [ "electronics", 4 ],
     "difficulty": 8,
     "time": 30000,
-    "book_learn": [ [ "recipe_atomic_battery", 4 ], [ "recipe_mininuke_launch", 4 ] ],
+    "book_learn": [ [ "recipe_atomic_battery", 4 ], [ "recipe_lab_cvd", 4 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
     "components": [ [ [ "canister_empty", 1 ] ], [ [ "plut_slurry", 10 ], [ "plut_slurry_dense", 5 ] ], [ [ "power_supply", 2 ] ] ]
   },
@@ -1724,5 +1724,20 @@
       [ [ "amplifier", 1 ] ],
       [ [ "lens", 1 ], [ "lens_small", 1 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "motor_micro",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_PARTS",
+    "skill_used": "electronics",
+    "difficulty": 1,
+    "time": 5000,
+    "reversible": true,
+    "decomp_learn": 1,
+    "book_learn": [ [ "manual_electronics", 1 ], [ "mag_electronics", 1 ] ],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "qualities": [ { "id": "SCREW", "level": 1 } ],
+    "components": [ [ [ "steel_chunk", 1 ] ], [ [ "cable", 4 ] ] ]
   }
 ]

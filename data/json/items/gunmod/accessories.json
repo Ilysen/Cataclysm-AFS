@@ -99,5 +99,26 @@
     "location": "accessories",
     "mod_targets": [ "rifle", "shotgun", "smg", "crossbow", "launcher" ],
     "flags": [ "IS_ARMOR", "BELTED", "OVERSIZE", "WATER_FRIENDLY" ]
+  },
+  {
+    "id": "bow_limb_blades",
+    "type": "TOOL",
+    "name": "limb blades",
+    "name_plural": "sets of limb blades",
+    "description": "Curved, thin blades adapted to the shape of a bow.  When attached to a bow, it will add cutting damage to it, allowing to serve as a passable melee weapon.",
+    "to_hit": -4,
+    "cutting": 17,
+    "weight": 122,
+    "volume": 1,
+    "price": 1000,
+    "symbol": ";",
+    "color": "gray",
+    "gunmod_data": {
+      "location": "accessories",
+      "mod_targets": [ "bow" ],
+      "dispersion_modifier": 20,
+      "mode_modifier": [ [ "REACH", "bayonet", 0, [ "MELEE", "REACH_ATTACK" ] ] ],
+      "min_skills": [ [ "weapon", 2 ], [ "melee", 2 ] ]
+    }
   }
 ]

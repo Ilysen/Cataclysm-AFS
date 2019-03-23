@@ -848,5 +848,21 @@
     "container": "bottle_plastic",
     "proportional": { "quench": 1.2 },
     "relative": { "fun": 1 }
+  },
+  {
+    "id": "sundew",
+    "type": "COMESTIBLE",
+    "name": "sundew",
+    "copy-from": "water_clean",
+    "weight": 10,
+    "color": "yellow",
+    "healthy": 2,
+    "description": "Water treated with some sort of chemical compound.  It's incapable of freezing, lighter than normal water, and glows faintly.  Drinking it seems to sharpen the senses.",
+    "price": 1000,
+    "looks_like": "diesel",
+    "container": "bottle_glass",
+    "stim": 4,
+    "flags": [ "LIGHT_2", "EATEN_HOT" ],
+    "freezing_point": -9999
   }
 ]

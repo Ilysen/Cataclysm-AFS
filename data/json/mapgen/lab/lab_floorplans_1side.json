@@ -431,8 +431,9 @@
         "r": {
           "items": [
             { "item": "military", "chance": 60 },
-            { "item": "ammo_milspec", "chance": 10 },
-            { "item": "guns_milspec", "chance": 10 }
+            { "item": "ammo_milspec", "chance": 20 },
+            { "item": "guns_milspec", "chance": 20 },
+            { "item": "lab_range_weapons", "chance": 8 }
           ]
         },
         "*": { "items": [ { "item": "casings", "chance": 10 } ] }

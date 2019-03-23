@@ -83,7 +83,7 @@
   {
     "id": "drugs_soldier",
     "type": "item_group",
-    "//" : "Healing items appropriate for soldiers and other paramilitary forces",
+    "//" : "Medicine items appropriate for soldiers and other paramilitary forces",
     "entries": [
       { "item": "1st_aid", "prob": 50 },
       { "item": "antibiotics", "prob": 20 },
@@ -91,7 +91,8 @@
       { "item": "morphine", "prob": 20 },
       { "item": "quikclot", "prob": 20 },
       { "item": "smoxygen_tank", "prob": 20 },
-      { "item": "tramadol", "prob": 20 }
+      { "item": "tramadol", "prob": 20 },
+      { "item": "nutriment", "prob": 15 }
     ]
   }
 ]

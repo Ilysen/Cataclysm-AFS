@@ -214,5 +214,35 @@
     "autolearn": true,
     "qualities": [ { "id": "SAW_M_FINE", "level": 1 } ],
     "components": [ [ [ "wire", 4 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "basin",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": 2000,
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 } ],
+    "components": [ [ [ "sheet_metal", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "rope_lighter",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": 10000,
+    "autolearn": true,
+    "qualities": [ { "id": "SCREW", "level": 1 } ],
+    "components": [
+      [ [ "rope_6", 1 ], [ "rope_makeshift_6", 1 ] ],
+      [ [ "scrap_copper", 1 ], [ "copper", 25 ] ],
+      [ [ "cu_pipe", 2 ] ],
+      [ [ "scrap", 3 ] ],
+      [ [ "sharp_rock", 1 ], [ "lighter", 1 ] ]
+    ]
   }
 ]

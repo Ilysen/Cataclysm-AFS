@@ -2226,7 +2226,7 @@
     "type": "GENERIC",
     "category": "weapons",
     "name": "tanto",
-    "description": "Long Japanese knives like this more-modern remake were the samurai's backup weapon, before the advent of the larger wakizashi.  This one doesn't feel well-balanced",
+    "description": "Long Japanese knives like this more-modern remake were the samurai's backup weapon, before the advent of the larger wakizashi.  This one doesn't feel very well-balanced.",
     "weight": 3,
     "volume": 2,
     "price": 18000,
@@ -2240,5 +2240,22 @@
     "techniques": "RAPID",
     "qualities": [ [ "CUT", 1 ], [ "CUT_FINE", 1 ], [ "BUTCHER", 7 ] ],
     "flags": [ "STAB", "SHEATH_KNIFE" ]
+  },
+  {
+    "id": "power_fist",
+    "type": "GENERIC",
+    "name": "power fist",
+    "description": "A huge, heavy metal gauntlet lined with tubing and gauges.  It uses internal pressure to deliver slow, devastating blows.",
+    "weight": 5778,
+    "volume": 8,
+    "price": 10000000,
+    "price_postapoc": 20000,
+    "material": [ "hardsteel", "superalloy" ],
+    "symbol": "[",
+    "color": "light_gray",
+    "bashing": 50,
+    "to_hit": 1,
+    "flags": [ "NO_REPAIR", "NONCONDUCTIVE", "SLOW_WIELD", "DURABLE_MELEE", "UNARMED_WEAPON" ],
+    "techniques": [ "BRUTAL", "PRESSURE_CRUNCH" ]
   }
 ]

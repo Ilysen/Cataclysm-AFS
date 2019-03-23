@@ -147,5 +147,35 @@
     "autolearn": true,
     "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "SCREW", "level": 1 } ],
     "components": [ [ [ "2x4", 1 ], [ "stick", 1 ] ], [ [ "hose", 2 ] ], [ [ "scrap", 3 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "folding_greatbow",
+    "//": "Similar materials to the compound greatbow, but much harder due to the folding aspect.",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 7 ] ],
+    "using": [ [ "forging_standard", 10 ] ],
+    "difficulty": 10,
+    "time": 300000,
+    "book_learn": [ [ "recipe_bows", 9 ], [ "welding_book", 8 ], [ "textbook_mechanics", 8 ] ],
+    "qualities": [
+      { "id": "ANVIL", "level": 3 },
+      { "id": "CUT", "level": 1 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "HAMMER", "level": 3 },
+      { "id": "HAMMER_FINE", "level": 1 },
+      { "id": "SAW_M_FINE", "level": 1 },
+      { "id": "CHISEL", "level": 3 }
+    ],
+    "tools": [ [ [ "swage", -1 ] ], [ [ "tongs", -1 ] ] ],
+    "components": [
+      [ [ "steel_standard", 2, "LIST" ] ],
+      [ [ "plastic_chunk", 4 ] ],
+      [ [ "sheet_metal_small", 8 ] ],
+      [ [ "duct_tape", 200 ], [ "superglue", 8 ] ],
+      [ [ "cordage", 18, "LIST" ], [ "filament", 1800, "LIST" ] ]
+    ]
   }
 ]

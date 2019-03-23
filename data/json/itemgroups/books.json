@@ -23,7 +23,11 @@
       [ "manual_shotgun", 30 ],
       [ "manual_smg", 10 ],
       [ "pocket_firearms", 100 ],
-      [ "recipe_bullets", 80 ]
+      [ "recipe_bullets", 80 ],
+      [ "textbook_shotguns", 3 ],
+      [ "textbook_handguns", 3 ],
+      [ "textbook_rifles", 3 ],
+      [ "textbook_launchers", 3 ]
     ]
   },
   {
@@ -56,7 +60,11 @@
       [ "manual_stabbing", 40 ],
       [ "manual_swimming", 30 ],
       [ "pocket_firearms", 10 ],
-      [ "textbook_firstaid", 30 ]
+      [ "textbook_firstaid", 30 ],
+      [ "textbook_shotguns", 20 ],
+      [ "textbook_handguns", 20 ],
+      [ "textbook_rifles", 20 ],
+      [ "textbook_launchers", 10 ]
     ]
   },
   {

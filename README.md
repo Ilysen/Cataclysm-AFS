@@ -20,7 +20,11 @@ If all of these things are met, your change is probably good to go! Keep in mind
 
 ## Download
 
-Because this page is still under construction, there's not a dedicated downloads section yet. Right now, you'll have to download and compile the game yourself, but hopefully that can change soon!
+Every day, as long as there's been changes since the previous one, there's a daily build released on the Releases section. The format followed is as follows - here's an example:
+
+Y1D3
+
+Y1, or Year 1, is an allusion to in-game years, not actual years. The year numbers represent major updates. D3, or Day 3, represents the build number or minor version. This can extend beyond actual years; for instance, Y0D503 is daily build 503 of major update 0.
 
 ## Compile
 

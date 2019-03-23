@@ -85,5 +85,17 @@
       { "group": "textbooks", "prob": 30 },
       [ "dnd_handbook", 3 ]
     ]
+  },  
+  {
+    "id": "lab_track_books",
+    "//": "Books found in the lab vehicle testing track",
+    "type": "item_group",
+    "items": [
+      [ "manual_mechanics", 6 ],
+      [ "textbook_mechanics", 3 ],
+      [ "textbook_biodiesel", 3 ],
+      [ "mag_fieldrepair", 4 ],
+      [ "book_icef", 4 ]
+    ]
   }
 ]

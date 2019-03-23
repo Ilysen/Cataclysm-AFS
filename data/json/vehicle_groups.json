@@ -382,5 +382,15 @@
         [ "helicopter_wreck_3b", 400 ],
         [ "helicopter_wreck_3c", 200 ]
       ]
+  },  
+  {
+    "id": "lab_track_cars",
+    "type": "vehicle_group",
+    "vehicles": [ [ "bubble_car", 10 ], [ "car_sports_atomic", 20 ] ]
+  },
+  {
+    "id": "lab_track_utility",
+    "type": "vehicle_group",
+    "vehicles": [ [ "welding_cart", 5 ], [ "engine_crane", 3 ], [ "portable_generator", 8 ] ]
   }
 ]

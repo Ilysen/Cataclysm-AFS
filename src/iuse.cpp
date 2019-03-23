@@ -2344,6 +2344,8 @@ int iuse::crowbar( player *p, item *it, bool, const tripoint &pos )
     int pry_quality;
     int difficulty;
 
+    p->add_msg_if_player( m_info, _( "You use your %s to pry." ),
+                          it->tname() );
     if( type == t_door_locked || type == t_door_locked_alarm || type == t_door_locked_interior ) {
         succ_action = _( "You pry open the door." );
         fail_action = _( "You pry, but cannot pry open the door." );

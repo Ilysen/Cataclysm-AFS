@@ -1645,6 +1645,46 @@
       "type": "transform"
     },
     "flags": [ "LIGHT_20", "CHARGEDIM", "TRADER_AVOID" ]
+  },  
+  {
+    "id": "atomic_smartphone",
+    "type": "TOOL",
+    "name": "atomic smartphone",
+    "description": "Never charge your phone again with the Rivtech atomic smartphone.  Rated for 10 million years of use, this cutting-edge gadget had been on public markets for less than a week when the Cataclysm hit, and their eye-watering price made them a rarity.  It includes an alarm clock, a high-resolution camera, and a bright flashlight.",
+    "weight": 300,
+    "volume": "50 ml",
+    "price": 200000,
+    "price_postapoc": 2500,
+    "material": [ "plastic", "aluminum" ],
+    "looks_like": "cell_phone",
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": [
+      {
+        "target": "atomic_smartphone_flashlight",
+        "msg": "You activate the flashlight app.",
+        "active": true,
+        "type": "transform"
+      },
+      { "revert_to": "atomic_smartphone", "type": "CAMERA" }
+    ],
+    "flags": [ "WATCH", "ALARMCLOCK" ]
+  },
+  {
+    "id": "atomic_smartphone_flashlight",
+    "copy-from": "afs_atomic_smartphone",
+    "type": "TOOL",
+    "name": "atomic smartphone - Flashlight",
+    "name_plural": "atomic smartphones - Flashlight",
+    "revert_to": "atomic_smartphone",
+    "use_action": {
+      "target": "atomic_smartphone",
+      "msg": "You deactivate the flashlight app.",
+      "menu_text": "Turn off flashlight",
+      "type": "transform"
+    },
+    "//": "since we cost no battery, no reason not to keep these",
+    "flags": [ "WATCH", "ALARMCLOCK", "LIGHT_25" ]
   },
   {
     "id": "chainsaw_off",
@@ -5909,6 +5949,21 @@
     "container_data": { "contains": 100, "watertight": true },
     "qualities": [ [ "COOK", 3 ], [ "BOIL", 2 ], [ "CONTAIN", 1 ], [ "CHEM", 1 ] ],
     "use_action": "HEAT_FOOD"
+  },
+  {
+    "id": "atompot",
+    "type": "TOOL",
+    "name": "AtomPot",
+    "copy-from": "pressure_cooker",
+    "description": "Rivtech's premiere self-heating kitchen appliance, complete with lid, hand-crafted with the power of the atom to reach any temperature in thirty seconds.  As bulky as it is, its plutonium power source means that it can be used to cook an absurd amount of meals without ever worrying about running low on power.",
+    "price": 30000,
+    "price_postapoc": 5000,
+    "material": [ "steel", "plastic" ],
+    "looks_like": "pot",
+    "symbol": ")",
+    "color": "light_green",
+    "use_action": "HOTPLATE",
+    "flags": [ "ALLOWS_REMOTE_USE" ]
   },
   {
     "id": "press",

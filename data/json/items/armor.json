@@ -6900,6 +6900,27 @@
     "flags": [ "VARSIZE" ]
   },
   {
+    "id": "ski_jacket",
+    "type": "ARMOR",
+    "name": "ski jacket",
+    "description": "An insulated, breathable hoodie made for alpine skiing.  Very warm, and with sizable pockets.",
+    "weight": 1105,
+    "volume": 20,
+    "price": 18000,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "color": "light_blue",
+    "covers": [ "TORSO", "ARMS" ],
+    "coverage": 95,
+    "encumbrance": 14,
+    "storage": 12,
+    "warmth": 80,
+    "material_thickness": 5,
+    "environmental_protection": 3,
+    "flags": [ "VARSIZE", "POCKETS", "HOOD", "COLLAR", "OUTER" ],
+    "looks_like": "coat_winter"
+  },
+  {
     "id": "pants_ski",
     "type": "ARMOR",
     "name": "ski pants",

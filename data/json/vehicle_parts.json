@@ -757,6 +757,36 @@
       { "item": "hose", "prob": 50 },
       { "item": "motor_tiny", "prob": 25 }
     ]
+  },  
+  {
+    "type": "vehicle_part",
+    "id": "vehicle_fridge",
+    "copy-from": "minifridge",
+    "name": "refrigerator",
+    "symbol": "{",
+    "color": "white",
+    "broken_color": "white",
+    "looks_like": "minifridge",
+    "durability": 400,
+    "description": "A medium-sized household refrigerator, converted to utilize vehicle power.  When turned on, food inside will be cooled, extending the time it has before spoiling.",
+    "epower": -100,
+    "size": 1200,
+    "item": "vehicle_standing_fridge"
+  },
+  {
+    "type": "vehicle_part",
+    "id": "vehicle_freezer",
+    "copy-from": "minifreezer",
+    "name": "freezer",
+    "symbol": "{",
+    "color": "light_blue",
+    "broken_color": "light_blue",
+    "looks_like": "minifridge",
+    "durability": 400,
+    "description": "A household fridge, converted to run at a much lower temperature and on vehicle power.  When turned on, food inside will be frozen, halting spoilage but making it inedible until reheated.",
+    "epower": -120,
+    "size": 1200,
+    "item": "vehicle_standing_freezer"
   },
   {
     "type": "vehicle_part",

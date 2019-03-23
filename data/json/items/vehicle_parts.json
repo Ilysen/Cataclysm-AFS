@@ -650,7 +650,31 @@
         "category" : "veh_parts",
         "price": 70000,
         "insulation": 4
-    },
+    },  {
+    "id": "vehicle_standing_fridge",
+    "type": "GENERIC",
+    "name": "vehicle refrigerator",
+    "description": "A household refrigerator with impressive capacity.  Its power connection has been refurbished, and it can be mounted onto a vehicle to draw from its power.",
+    "symbol": "{",
+    "color": "white",
+    "weight": 142882,
+    "volume": 1200,
+    "price": 40000,
+    "price_postapoc": 10000,
+    "material": [ "steel" ],
+    "to_hit": -4,
+    "bashing": 8,
+    "flags": [ "DURABLE_MELEE" ],
+    "looks_like": "minifridge"
+  },
+  {
+    "id": "vehicle_standing_freezer",
+    "type": "GENERIC",
+    "name": "vehicle freezer",
+    "copy-from": "vehicle_standing_fridge",
+    "description": "This refurbished refrigerator has been stripped of much of its internal components and converted to run at a much lower temperature, causing it to serve as a freezer for more power.  Like its predecessor, it runs on vehicle power.",
+    "color": "light_blue"
+  },
     {
         "type": "GENERIC",
         "id": "washing_machine",

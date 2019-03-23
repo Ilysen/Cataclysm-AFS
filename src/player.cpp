@@ -136,6 +136,7 @@ const efftype_id effect_jetinjector( "jetinjector" );
 const efftype_id effect_lack_sleep( "lack_sleep" );
 const efftype_id effect_sleep_deprived( "sleep_deprived" );
 const efftype_id effect_lying_down( "lying_down" );
+const efftype_id effect_meditation( "meditation" );
 const efftype_id effect_mending( "mending" );
 const efftype_id effect_meth( "meth" );
 const efftype_id effect_narcosis( "narcosis" );
@@ -396,6 +397,7 @@ static const trait_id trait_URSINE_EYE( "URSINE_EYE" );
 static const trait_id trait_URSINE_FUR( "URSINE_FUR" );
 static const trait_id trait_VISCOUS( "VISCOUS" );
 static const trait_id trait_VOMITOUS( "VOMITOUS" );
+static const trait_id trait_WAKEFUL3( "WAKEFUL3" );
 static const trait_id trait_WATERSLEEP( "WATERSLEEP" );
 static const trait_id trait_WEAKSCENT( "WEAKSCENT" );
 static const trait_id trait_WEAKSTOMACH( "WEAKSTOMACH" );
@@ -4269,6 +4271,10 @@ needs_rates player::calc_needs_rates()
     rates.thirst *= 1.0f +  mutation_value( "thirst_modifier" );
     if( worn_with_flag( "SLOWS_THIRST" ) ) {
         rates.thirst *= 0.7f;
+    }
+    if( has_trait( trait_WAKEFUL3 ) && in_sleep_state() ) {
+        rates.hunger *= 0.2f;
+        rates.thirst *= 0.2f;
     }
 
     // Note: intentionally not in metabolic rate
@@ -10135,6 +10141,9 @@ void player::try_to_sleep( const time_duration &dur )
                            _( "It's hard to get to sleep on this %s." ),
                            ter_at_pos.obj().name().c_str() );
     }
+    if( has_effect( effect_meditation ) ) {
+        add_msg_if_player( m_good, _( "You set your mind at ease..." ) );
+    }
     add_msg_if_player( _( "You start trying to fall asleep." ) );
     assign_activity( activity_id( "ACT_TRY_SLEEP" ), to_moves<int>( dur ) );
 }
@@ -10302,6 +10311,10 @@ bool player::can_sleep()
     if( has_effect( effect_meth ) ) {
         // Sleep ain't happening until that meth wears off completely.
         return false;
+    }
+    if( has_effect( effect_meditation ) ) {
+        // Elf-a mutants can let themselves fall asleep if they don't become tired naturally.
+        return true;
     }
 
     // Since there's a bit of randomness to falling asleep, we want to

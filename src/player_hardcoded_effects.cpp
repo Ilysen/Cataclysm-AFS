@@ -53,6 +53,7 @@ const efftype_id effect_hallu( "hallu" );
 const efftype_id effect_hot( "hot" );
 const efftype_id effect_infected( "infected" );
 const efftype_id effect_lying_down( "lying_down" );
+const efftype_id effect_meditation( "meditation" );
 const efftype_id effect_mending( "mending" );
 const efftype_id effect_meth( "meth" );
 const efftype_id effect_narcosis( "narcosis" );
@@ -1002,7 +1003,7 @@ void player::hardcoded_effects( effect &it )
             it.mod_intensity( 1 );
         }
 
-        if( has_effect( effect_narcosis ) && get_fatigue() <= 25 ) {
+        if( ( has_effect( effect_narcosis ) || has_effect( effect_meditation ) ) && get_fatigue() <= 25 ) {
             set_fatigue( 25 ); //Prevent us from waking up naturally while under anesthesia
         }
 
@@ -1097,7 +1098,8 @@ void player::hardcoded_effects( effect &it )
         int tirednessVal = rng( 5, 200 ) + rng( 0, abs( get_fatigue() * 2 * 5 ) );
         if( !is_blind() && !has_effect( effect_narcosis ) ) {
             if( !has_trait(
-                    trait_id( "SEESLEEP" ) ) ) { // People who can see while sleeping are acclimated to the light.
+                    trait_id( "SEESLEEP" ) ) ||
+                has_effect( effect_meditation ) ) { // People who can see while sleeping are acclimated to the light.
                 if( has_trait( trait_id( "HEAVYSLEEPER2" ) ) && !has_trait( trait_id( "HIBERNATE" ) ) ) {
                     // So you can too sleep through noon
                     if( ( tirednessVal * 1.25 ) < g->m.ambient_light_at( pos() ) && ( get_fatigue() < 10 ||
@@ -1123,7 +1125,7 @@ void player::hardcoded_effects( effect &it )
                     it.set_duration( 0_turns );
                     woke_up = true;
                 }
-            } else if( has_active_mutation( trait_id( "SEESLEEP" ) ) ) {
+            } else if( has_active_mutation( trait_id( "SEESLEEP" ) ) || has_effect( effect_meditation ) ) {
                 Creature *hostile_critter = g->is_hostile_very_close();
                 if( hostile_critter != nullptr ) {
                     add_msg_if_player( _( "You see %s approaching!" ),

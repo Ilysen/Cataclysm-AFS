@@ -49,11 +49,13 @@
 const efftype_id effect_alarm_clock( "alarm_clock" );
 const efftype_id effect_laserlocked( "laserlocked" );
 const efftype_id effect_relax_gas( "relax_gas" );
+const efftype_id effect_meditation( "meditation" );
 
 static const bionic_id bio_remote( "bio_remote" );
 
 static const trait_id trait_HIBERNATE( "HIBERNATE" );
 static const trait_id trait_SHELL2( "SHELL2" );
+static const trait_id trait_WAKEFUL3( "WAKEFUL3" );
 
 const skill_id skill_driving( "driving" );
 const skill_id skill_melee( "melee" );
@@ -802,6 +804,28 @@ static void sleep()
         as_m.query();
         if( as_m.ret >= 3 && as_m.ret <= 9 ) {
             u.add_effect( effect_alarm_clock, 1_hours * as_m.ret );
+            try_sleep_dur = 1_hours * as_m.ret + 1_turns;
+        } else if( as_m.ret < 0 ) {
+            return;
+        }
+    }
+    if( u.has_trait( trait_WAKEFUL3 ) ) {
+        as_m.reset();
+        as_m.text = _( "You don't become tired naturally.  Medidate for a length of time?" );
+
+        as_m.entries.emplace_back( 0, true,
+                                   get_option<bool>( "FORCE_CAPITAL_YN" ) ? 'N' : 'n',
+                                   _( "No, don't meditate." ) );
+
+        for( int i = 2; i <= 9; ++i ) {
+            as_m.entries.emplace_back( i, true, '0' + i,
+                                       string_format( _( "Meditate for %i hours." ), i ) );
+        }
+
+        as_m.query();
+        if( as_m.ret >= 2 && as_m.ret <= 9 ) {
+            u.add_effect( effect_meditation,
+                          ( 1_hours * as_m.ret ) - 1_hours ); // Sleep code means that it takes about 1 hour to wake up after meditation
             try_sleep_dur = 1_hours * as_m.ret + 1_turns;
         } else if( as_m.ret < 0 ) {
             return;

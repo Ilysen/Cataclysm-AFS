@@ -1630,6 +1630,13 @@
   },
   {
     "type": "effect_type",
+    "id": "meditation",
+    "//": "Used by elf-a mutants",
+    "name": [ "Meditation" ],
+    "desc": [ "Your mind is at ease, and you are allowing yourself to sleep." ]
+  },
+  {
+    "type": "effect_type",
     "id": "has_og_comm_freq"
   },
   {

@@ -91,6 +91,7 @@ static const trait_id trait_THRESH_INSECT( "THRESH_INSECT" );
 static const trait_id trait_THRESH_PLANT( "THRESH_PLANT" );
 static const trait_id trait_THRESH_SPIDER( "THRESH_SPIDER" );
 static const trait_id trait_URSINE_EYE( "URSINE_EYE" );
+static const trait_id trait_WAKEFUL3( "WAKEFUL3" );
 static const trait_id trait_WEBBED( "WEBBED" );
 static const trait_id debug_nodmg( "DEBUG_NODMG" );
 
@@ -539,7 +540,8 @@ void Character::recalc_sight_limits()
     vision_mode_cache.reset();
 
     // Set sight_max.
-    if( is_blind() || ( in_sleep_state() && !has_trait( trait_SEESLEEP ) ) ||
+    if( is_blind() || ( in_sleep_state() && !has_trait( trait_SEESLEEP ) &&
+                        !has_trait( trait_WAKEFUL3 ) ) ||
         has_effect( effect_narcosis ) ) {
         sight_max = 0;
     } else if( has_effect( effect_boomered ) && ( !( has_trait( trait_PER_SLIME_OK ) ) ) ) {
@@ -1994,6 +1996,9 @@ std::pair<std::string, nc_color> Character::get_fatigue_description() const
     } else if( fatigue > TIRED ) {
         fatigue_color = c_yellow;
         fatigue_string = _( "Tired" );
+    } else if( has_trait( trait_WAKEFUL3 ) ) {
+        fatigue_color = c_cyan;
+        fatigue_string = _( "Tireless" );
     }
     return std::make_pair( fatigue_string, fatigue_color );
 }

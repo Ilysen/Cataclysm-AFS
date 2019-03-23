@@ -1459,15 +1459,15 @@
     "type": "mutation",
     "id": "WAKEFUL3",
     "name": "Tireless",
-    "points": 5,
-    "description": "You defend the realm all night and all day.",
+    "points": 6,
+    "description": "You no longer naturally become tired, and can defend the realm all night and day.  When attempting to sleep, you may instead choose to meditate for an equivalent length of time, placing you in a limited state of awareness that vastly slows your body's energy consumption while conferring the healing and other benefits that sleep offers.",
     "valid": false,
     "purifiable": false,
     "types": [ "SLEEP" ],
     "prereqs": [ "WAKEFUL2" ],
     "threshreq": [ "THRESH_ELFA" ],
     "category": [ "ELFA" ],
-    "fatigue_modifier": -0.5,
+    "fatigue_modifier": -1.0,
     "fatigue_regen_modifier": 0.5
   },
   {

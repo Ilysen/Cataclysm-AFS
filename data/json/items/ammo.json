@@ -2,7 +2,7 @@
   {
     "type": "AMMO",
     "id": "battery",
-    "category": "spare_parts",
+    "category": "tools",
     "price": 12000,
     "name": "battery",
     "name_plural": "batteries",
@@ -176,7 +176,7 @@
   {
     "type": "AMMO",
     "id": "plut_cell",
-    "category": "spare_parts",
+    "category": "tools",
     "price": 150000,
     "name": "plutonium cell",
     "symbol": "=",

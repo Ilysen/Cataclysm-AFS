@@ -3043,5 +3043,117 @@
       "male": [ "boxer_shorts" ],
       "female": [ "bra", "panties" ]
     }
+  },
+  {
+    "type": "profession",
+    "ident": "skiier",
+    "name": "Skiier",
+    "description": "The slopes of New England are nice this time of year, and you were spending the month on vacation at a resort when you were evacuated.",
+    "points": 2,
+    "traits": [ "PROF_SKIIER" ],
+    "skills": [ { "level": 3, "name": "dodge" }, { "level": 2, "name": "survival" } ],
+    "items": {
+      "both": [ "ski_jacket", "pants_ski", "socks_wool", "boots_winter", "mask_ski", "goggles_ski", "gloves_wool", "duffelbag" ],
+      "male": [ "briefs" ],
+      "female": [ "sports_bra", "boy_shorts" ]
+    }
+  },
+  {
+    "type": "profession",
+    "ident": "linux_patron",
+    "name": "Linux Patron",
+    "description": "You've grown up using Linux, have hacked together your own operating system out of Gentoo and a bunch of packages, and campaign for open source like it's a basic human right.  None of these things matter in the apocalypse, but your knowledge of the inner workings of 87% of the world's servers might.",
+    "points": 2,
+    "skills": [ { "level": 5, "name": "computer" } ],
+    "items": {
+      "both": [ "laptop", "software_useless", "eink_tablet_pc", "linuxtshirt", "pants_cargo", "socks", "slingpack", "sneakers", "smart_phone" ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "ident": "technician",
+    "name": "Technician",
+    "description": "You worked as an electrical lineman for New England's leading electrical company.  You were still in uniform when the Cataclysm struck.",
+    "points": 2,
+    "skills": [ { "level": 2, "name": "electronics" }, { "level": 2, "name": "mechanics" } ],
+    "items": {
+      "both": [
+        "hat_hard",
+        "toolbox",
+        "technician_shirt_gray",
+        "technician_pants_gray",
+        "socks",
+        "gloves_work",
+        "boots_steel",
+        "tool_belt"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "ident": "afs_librarian",
+    "name": "Librarian",
+    "description": "The librarian's calling is a simple one, but it suited you fine.  When the sirens sounded, you grabbed some manuals on your way out.",
+    "points": 1,
+    "traits": [ "LOVES_BOOKS" ],
+    "items": {
+      "both": [
+        "pants",
+        "dress_shirt",
+        "socks",
+        "dress_shoes",
+        "knit_scarf",
+        "manual_mechanics",
+        "manual_electronics",
+        "cookbook_sushi",
+        "glassblowing_book",
+        "collector_book",
+        "backpack_leather"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "ident": "affluent_executive",
+    "name": "Affluent Executive",
+    "description": "You worked at a high position in a wealthy company, earning numbers most people could only dream of, and you savored it.  You start with a maxed-out cash card.",
+    "points": 2,
+    "items": {
+      "both": {
+        "items": [ "tux", "dress_shoes", "socks", "gold_watch", "undershirt", "smart_phone", "gasdiscount_platinum" ],
+        "entries": [ { "item": "cash_card", "charges": 200000000 } ]
+      },
+      "male": [ "briefs", "collarpin", "diamond_ring" ],
+      "female": [ "panties", "hairpin", "pearl_collar" ]
+    }
+  },  {
+    "type": "profession",
+    "ident": "atomic_pitchman",
+    "name": { "male": "Atomic Pitchman", "female": "Atomic Pitchwoman" },
+    "description": "You were hired to market Rivtech's products through TV and were on your way to the studio when the bombs hit.  You enter now the end of the world with nothing but the snazzy clothes on your back and a bunch of plutonium-powered toys.",
+    "points": 3,
+    "skills": [ { "level": 1, "name": "barter" } ],
+    "items": {
+      "both": [
+        "dress_shirt",
+        "pants",
+        "dress_shoes",
+        "socks",
+        "mbag",
+        "atomic_smartphone",
+        "atomic_coffeepot",
+        "atomic_lamp_off",
+        "atompot",
+        "energy_drink_atomic"
+      ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
   }
 ]

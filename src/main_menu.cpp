@@ -225,7 +225,7 @@ void main_menu::init_strings()
     mmenu_title = load_file( PATH_INFO::find_translated_file( "titledir",
                              halloween_theme ? ".halloween" : ".title",
                              halloween_theme ? "halloween" : "title" ),
-                             _( "Cataclysm: Dark Days Ahead" ) );
+                             _( "Cataclysm: Aftershock" ) );
     // MOTD
     auto motd = load_file( PATH_INFO::find_translated_file( "motddir", ".motd", "motd" ),
                            _( "No message today." ) );

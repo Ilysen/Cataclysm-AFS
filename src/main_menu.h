@@ -19,7 +19,7 @@ class main_menu
         bool opening_screen();
 
     private:
-        // ASCII art that says "Cataclysm Dark Days Ahead"
+        // ASCII art that says "Cataclysm | Aftershock"
         std::vector<std::string> mmenu_title;
         std::string mmenu_motd;
         std::string mmenu_credits;

@@ -2068,7 +2068,7 @@ void player::memorial( std::ostream &memorial_file, const std::string &epitaph )
                                    pronoun.c_str(), locdesc.c_str() );
 
     //Header
-    memorial_file << string_format( _( "Cataclysm - Dark Days Ahead version %s memorial file" ),
+    memorial_file << string_format( _( "Cataclysm - Aftershock version %s memorial file" ),
                                     getVersionString() ) << eol;
     memorial_file << eol;
     memorial_file << string_format( _( "In memory of: %s" ), name.c_str() ) << eol;

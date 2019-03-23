@@ -757,7 +757,7 @@
       { "item": "hose", "prob": 50 },
       { "item": "motor_tiny", "prob": 25 }
     ]
-  },  
+  },
   {
     "type": "vehicle_part",
     "id": "vehicle_fridge",

@@ -2139,7 +2139,7 @@
     "pre_terrain": "t_floor",
     "post_terrain": "f_pillow_fort"
   },
-    {
+  {
     "type": "construction",
     "description": "Convert Fridge Power Supply",
     "category": "FURN",

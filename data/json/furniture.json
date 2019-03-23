@@ -1017,7 +1017,8 @@
         { "item": "motor_tiny", "prob": 25 }
       ]
     }
-  },  {
+  },
+  {
     "type": "furniture",
     "id": "f_fridge_vehicle",
     "name": "standing refrigerator",

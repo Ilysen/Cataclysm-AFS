@@ -2568,5 +2568,29 @@
         "environmental_protection": 2,
         "techniques": [ "WBLOCK_1" ],
         "flags": [ "WATERPROOF", "STURDY" ]
-    }
+    },
+  {
+    "id": "UPS_off",
+    "type": "TOOL_ARMOR",
+    "copy-from": "UPS_off",
+    "name": "UPS",
+    "name_plural": "UPS's",
+    "description": "This is a unified power supply, or UPS.  It is a device developed jointly by military and scientific interests for use in combat and the field.  The UPS is designed to power armor and some guns, but drains batteries quickly.  It can be worn around to either leg for ease of access, and it's been waterproofed to protect the delicate electronics.",
+    "coverage": 5,
+    "encumbrance": 1,
+    "covers": [ "LEG_EITHER" ],
+    "flags": [ "NO_UNLOAD", "RECHARGE", "WAIST", "FRAGILE", "OVERSIZE", "WATERPROOF" ]
+  },
+  {
+    "id": "adv_UPS_off",
+    "type": "TOOL_ARMOR",
+    "copy-from": "adv_UPS_off",
+    "name": "advanced UPS",
+    "name_plural": "advanced UPS's",
+    "description": "This is an advanced version of the unified power supply, or UPS.  This device has been significantly redesigned to provide better efficiency as well as to consume plutonium fuel cells rather than batteries, and is both slimmer and lighter to wear.  Sadly, its plutonium reactor can't be charged in UPS charging station.",
+    "coverage": 5,
+    "encumbrance": 0,
+    "covers": [ "LEG_EITHER" ],
+    "flags": [ "WAIST", "FRAGILE", "OVERSIZE" ]
+  }
 ]

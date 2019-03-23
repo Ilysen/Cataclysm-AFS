@@ -1,0 +1,7 @@
+#Aftershock soundpack
+#Name of the soundpack
+NAME: Aftershock
+#Viewing name of the soundpack
+VIEW: Aftershock
+DESCRIPTION: Dark, atmospheric music tracks licensed under CC-BY.
+ All music has been authored by CO.AG, and remixed by SkyBreach.

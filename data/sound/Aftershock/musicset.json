@@ -1,0 +1,118 @@
+[
+       {
+        "type": "playlist",
+        "playlists":
+        [
+        {
+            "id" : "title",
+            "shuffle" : false,
+            "files" : [
+                {
+                    "file": "music/CO.AG_01_Cataclysm.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_02_TheOnesWhoNeverRest.ogg",
+                    "volume": 70
+                },
+                {
+                    "file": "music/CO.AG_03_ISeeYou.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_04_G.E.Rasputin.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_05_PostApocalyptic.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_06_BeCarefulWhatYouWishFor.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_07_ChernobylDisaster.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_08_AboutToFall.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_09_ForTerror.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_10_Ghost.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_11_TheMiddleOfNowhere.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_12_LetsRead.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_13_TheEndIsComing.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_14_DontFallAsleep.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_15_UnpleasantImage.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_16_TheDesert.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_17_Behind.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_18_Dreams.ogg",
+                    "volume": 75
+                },
+                {
+                    "file": "music/CO.AG_19_GiveUsTime.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_20_TheInfected.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_21_TheWoods.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_22_Magnetic.ogg",
+                    "volume": 70
+                },
+				{
+                    "file": "music/CO.AG_23_TheSlenderMan.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_24_TheLost.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_25_HeLiesBrokenByYourShame.ogg",
+                    "volume": 75
+                },
+				{
+                    "file": "music/CO.AG_26_ADarkerShadeOfDarkness.ogg",
+                    "volume": 70
+                }
+            ]
+        }
+    ]
+}
+]

@@ -2,6 +2,6 @@
     "type": "MOD_INFO",
     "ident": "dev:default",
     "name": "default",
-    "description": "contains all the mods recommended by the developers",
-    "dependencies": [ "dda", "no_npc_food", "filthy_morale" ]
+    "description": "Contains all the mods recommended by the community.",
+    "dependencies": [ "dda", "aftershock", "boats", "deoxymod", "makeshift", "More_Survival_Tools", "npc_traits", "no_npc_food", "filthy_morale" ]
 }

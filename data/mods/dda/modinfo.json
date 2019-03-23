@@ -3,7 +3,7 @@
     "type": "MOD_INFO",
     "ident": "dda",
     "name": "Dark Days Ahead",
-    "description": "Core content for Cataclysm-DDA",
+    "description": "Core content for DDA.",
     "category": "content",
     "core": true,
     "path": "../../json",

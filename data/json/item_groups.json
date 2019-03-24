@@ -6525,6 +6525,15 @@
     ]
   },{
     "type" : "item_group",
+    "id" : "bionics_finale",
+    "//" : "Rare or powerful bionics found in lab finales and other high-risk areas.",
+    "subtype": "distribution",
+    "items":[
+      ["bio_terrarium", 10],
+      ["bio_nanites", 10]
+    ]
+  },{
+    "type" : "item_group",
     "id" : "weapons",
     "items":[
       ["chain", 20],

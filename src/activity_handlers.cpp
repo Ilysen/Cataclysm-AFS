@@ -316,6 +316,10 @@ void set_up_butchery( player_activity &act, player &u, butcher_type action )
                 u.add_msg_if_player( m_info,
                                      _( "You dissect the corpse with a sophisticated system of surgical grade scalpels." ) );
                 break;
+            case 100:
+                u.add_msg_if_player( m_info,
+                                     _( "Your nanites swarm invisibly over the body, cleanly extracting any implants housed inside." ) );
+                break;
         }
     }
 

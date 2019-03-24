@@ -63,6 +63,30 @@
     "qualities": [ [ "BUTCHER", 8 ] ]
   },
   {
+    "id": "bio_nanites_item",
+    "copy-from": "fake_item",
+    "type": "TOOL",
+    "name": "nanite swarm",
+    "flags": "TRADER_AVOID",
+    "use_action": [ "HAMMER", "CROWBAR" ],
+    "qualities": [
+      [ "HAMMER", 3 ],
+      [ "HAMMER_FINE", 1 ],
+      [ "SAW_W", 1 ],
+      [ "SAW_M", 2 ],
+      [ "SAW_M_FINE", 1 ],
+      [ "WRENCH", 2 ],
+      [ "WRENCH_FINE", 1 ],
+      [ "SCREW", 1 ],
+      [ "SCREW_FINE", 1 ],
+      [ "CUT", 3 ],
+      [ "CUT_FINE", 100 ],
+      [ "PRY", 4 ],
+      [ "DRILL", 3 ],
+      [ "BUTCHER", 100 ]
+    ]
+  },
+  {
     "id": "clairvoyance_plus_rod",
     "type": "TOOL",
     "symbol": "v",

@@ -911,6 +911,12 @@ bool player::uninstall_bionic( const bionic_id &b_id, player &installer, bool au
         return false;
     }
 
+    if( b_id == "bio_terrarium" ) {
+        popup( _( "Removing %s terrarium from would kill %s." ),
+               disp_name( true ), disp_name() );
+        return false;
+    }
+
     if( ( b_id == "bio_reactor" ) || ( b_id == "bio_advreactor" ) ) {
         if( !query_yn(
                 _( "WARNING: Removing a reactor may leave radioactive material! Remove anyway?" ) ) ) {

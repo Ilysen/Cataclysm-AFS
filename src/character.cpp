@@ -1976,8 +1976,13 @@ std::pair<std::string, nc_color> Character::get_hunger_description() const
         hunger_color = c_green;
         hunger_string = _( "Sated" );
     } else if( hunger < 0 ) {
-        hunger_color = c_green;
-        hunger_string = _( "Full" );
+        if( has_bionic( bionic_id( "bio_terrarium" ) ) ) {
+            hunger_color = c_cyan;
+            hunger_string = _( "Iteratio" );
+        } else {
+            hunger_color = c_green;
+            hunger_string = _( "Full" );
+        }
     }
     return std::make_pair( hunger_string, hunger_color );
 }

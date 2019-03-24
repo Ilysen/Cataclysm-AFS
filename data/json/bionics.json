@@ -1156,22 +1156,5 @@
     "//": "Check items/guns/40mm.json.",
     "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "NO_UNWIELD" ],
     "act_cost": 5
-  },
-  {
-    "id": "bio_terrarium",
-    "type": "bionic",
-    "name": "Iteratio Terrarium",
-    "description": "An experimental, synthetic terrarium that replaces your entire digestive system.  It utilizes your body heat and fluids to cultivate plants at rapid rates, which are broken down into starch and fed into your body, removing your need for food but increasing the amount of water you need to drink.  Normal food can still be eaten, but will yield no nutritional value.",
-    "occupied_bodyparts": [ [ "TORSO", 40 ] ],
-    "price": 100000000
-  },
-  {
-    "id": "bio_nanites",
-    "type": "bionic",
-    "name": "Nanite Swarm",
-    "description": "Your body is a host to a swarm of several hundred nanomachines, with an ultra-high-frequency transceiver on your brain serving as their command center.  At will, they can emerge through the pores in your skin and form together to create shapes or perform tasks.  They automatically mimic any tool, and the heat-resistant drones can heat themselves up to 20 thousand degrees Celcius to allow for welding and cooking.",
-    "occupied_bodyparts": [ [ "HEAD", 2 ] ],
-    "price": 100000000,
-    "fake_item": "bio_nanites_item"
   }
 ]

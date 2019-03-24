@@ -1098,9 +1098,8 @@ void player::hardcoded_effects( effect &it )
         int tirednessVal = rng( 5, 200 ) + rng( 0, abs( get_fatigue() * 2 * 5 ) );
         if( !is_blind() && !has_effect( effect_narcosis ) ) {
             if( !has_trait(
-                    trait_id( "SEESLEEP" ) ) &&
-                has_effect(
-                    effect_meditation ) ) { // People who can see while sleeping are acclimated to the light.
+                    trait_id( "SEESLEEP" ) ) ||
+                has_effect( effect_meditation ) ) { // People who can see while sleeping are acclimated to the light.
                 if( has_trait( trait_id( "HEAVYSLEEPER2" ) ) && !has_trait( trait_id( "HIBERNATE" ) ) ) {
                     // So you can too sleep through noon
                     if( ( tirednessVal * 1.25 ) < g->m.ambient_light_at( pos() ) && ( get_fatigue() < 10 ||

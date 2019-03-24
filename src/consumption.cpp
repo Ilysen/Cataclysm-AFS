@@ -458,9 +458,6 @@ ret_val<edible_rating> player::can_eat( const item &food ) const
     if( has_trait( trait_id( "M_DEPENDENT" ) ) && !food.has_flag( "MYCUS_OK" ) ) {
         return ret_val<edible_rating>::make_failure( INEDIBLE_MUTATION,
                 _( "We can't eat that.  It's not right for us." ) );
-    } else if( has_bionic( bionic_id( "bio_terrarium" ) ) && !( drinkable || food.is_medication() ) ) {
-        return ret_val<edible_rating>::make_failure( INEDIBLE_MUTATION,
-                _( "Your digestive system is gone!" ) );
     }
     // Here's why PROBOSCIS is such a negative trait.
     if( has_trait( trait_id( "PROBOSCIS" ) ) && !( drinkable || food.is_medication() ) ) {

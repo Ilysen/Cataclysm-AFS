@@ -217,7 +217,6 @@ static const bionic_id bio_solar_panels( "bio_solar_panels" );
 static const bionic_id bio_spasm( "bio_spasm" );
 static const bionic_id bio_speed( "bio_speed" );
 static const bionic_id bio_syringe( "bio_syringe" );
-static const bionic_id bio_terrarium( "bio_terrarium" );
 static const bionic_id bio_tools( "bio_tools" );
 static const bionic_id bio_trip( "bio_trip" );
 static const bionic_id bio_uncanny_dodge( "bio_uncanny_dodge" );
@@ -751,9 +750,6 @@ void player::process_turn()
         get_hunger() < 100 && calendar::once_every( 5_turns ) ) {
         mod_hunger( 2 );
         charge_power( 25 );
-    }
-    if( has_bionic( bio_terrarium ) && get_hunger() > -10 && calendar::once_every( 10_turns ) ) {
-        mod_hunger( -2 );
     }
     if( has_trait( trait_DEBUG_BIONIC_POWER ) ) {
         charge_power( max_power_level );
@@ -4279,9 +4275,6 @@ needs_rates player::calc_needs_rates()
     if( has_trait( trait_WAKEFUL3 ) && in_sleep_state() ) {
         rates.hunger *= 0.2f;
         rates.thirst *= 0.2f;
-    }
-    if( has_bionic( bio_terrarium ) ) {
-        rates.thirst *= 1.25f;
     }
 
     // Note: intentionally not in metabolic rate

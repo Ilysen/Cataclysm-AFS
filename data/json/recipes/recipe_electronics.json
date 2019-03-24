@@ -1349,7 +1349,7 @@
     "time": 40000,
     "autolearn": true,
     "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "CUT", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
-    "tools": [ [ [ "boltcutters", -1 ], [ "toolset", -1 ], [ "bio_nanites_item", -1 ] ] ],
+    "tools": [ [ [ "boltcutters", -1 ], [ "toolset", -1 ] ] ],
     "components": [ [ [ "copper", 100 ], [ "scrap_copper", 1 ] ], [ [ "duct_tape", 100 ] ] ]
   },
   {

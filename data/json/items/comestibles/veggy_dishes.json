@@ -9,6 +9,17 @@
     "spoils_in": "2 days 12 hours",
     "description": "A cooked stalk from a cattail plant.  Its fibrous outer leaves have been stripped away and now it is quite delicious.",
     "price": 0,
+    "fun": 3
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cooked_cattail_rhizome",
+    "name": "cooked cattail rhizome",
+    "copy-from": "cattail_rhizome",
+    "color": "brown",
+    "spoils_in": "2 days 12 hours",
+    "description": "A boiled cattail root.  Not especially tasty, but it's much more bearable cooked.",
+    "price": 0,
     "fun": 1
   },
   {

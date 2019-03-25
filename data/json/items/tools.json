@@ -8386,6 +8386,23 @@
     "flags": [ "BELT_CLIP" ]
   },
   {
+    "id": "chain_wrench",
+    "type": "TOOL",
+    "name": "chain wrench",
+    "name_plural": "chain wrenches",
+    "description": "A homemade chain wrench made for pipes and hard-to-reach bolts.  While simple, it's an effective tool for any bolt that doesn't require precision.",
+    "weight": 1614,
+    "volume": 3,
+    "price": 4000,
+    "price_postapoc": 1000,
+    "bashing": 6,
+    "material": "steel",
+    "symbol": ";",
+    "color": "red",
+    "qualities": [ [ "WRENCH", 2 ] ],
+    "flags": [ "BELT_CLIP" ]
+  },
+  {
     "id": "xacto",
     "type": "TOOL",
     "name": "X-Acto knife",

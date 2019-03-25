@@ -2365,6 +2365,18 @@
   },
   {
     "type": "recipe",
+    "result": "chain_wrench",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 2,
+    "time": 15000,
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SCREW", "level": 1 } ],
+    "components": [ [ [ "pipe", 1 ] ], [ [ "chain", 1 ] ], [ [ "scrap", 3 ] ], [ [ "adhesive", 1, "LIST" ] ] ]
+  },
+  {
+    "type": "recipe",
     "result": "wrench",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3269,8 +3281,6 @@
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
-    "skills_required": [ "mechanics", 3 ],
-    "difficulty": 4,
     "time": 4000,
     "reversible": true,
     "autolearn": true,

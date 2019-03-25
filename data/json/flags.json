@@ -318,13 +318,13 @@
     "id": "RAINPROOF",
     "type": "json_flag",
     "context": [ "ARMOR", "TOOL_ARMOR" ],
-    "info": "This gear <info>protects the whole body</info> from the rain."
+    "info": "This gear <info>protects the whole body from rain</info>."
   },
   {
     "id": "neoprene_padded",
     "type": "json_flag",
     "context": [ "ARMOR", "TOOL_ARMOR" ],
-    "info": "This gear <info>keeps out the rain</info>."
+    "info": "This gear <info>protects part of the body from rain</info>."
   },
   {
     "id": "RESTRICT_HANDS",

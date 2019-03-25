@@ -1159,11 +1159,11 @@ std::string item::info( std::vector<iteminfo> &info, const iteminfo_query *parts
             if( food_item->has_flag( "FREEZERBURN" ) && !food_item->rotten() &&
                 !food_item->has_flag( "MUSHY" ) ) {
                 info.emplace_back( "DESCRIPTION",
-                                   _( "* Quality of this food suffers when it's frozen, and it <neutral>will become mushy after thawing out</neutral>." ) );
+                                   _( "* This food is <neutral>susceptible to freezer burn</neutral>." ) );
             }
             if( food_item->has_flag( "MUSHY" ) && !food_item->rotten() ) {
                 info.emplace_back( "DESCRIPTION",
-                                   _( "* It was frozen once and after thawing became <bad>mushy and tasteless</bad>.  It will rot if thawed again." ) );
+                                   _( "* After thawing out, this food has become <bad>mushy and tasteless</bad>." ) );
             }
             if( food_item->has_flag( "NO_PARASITES" ) && g->u.get_skill_level( skill_cooking ) >= 3 ) {
                 info.emplace_back( "DESCRIPTION",
@@ -6627,8 +6627,6 @@ void item::apply_freezerburn()
     }
     if( !item_tags.count( "MUSHY" ) ) {
         item_tags.insert( "MUSHY" );
-    } else {
-        set_relative_rot( 1.01 );
     }
 }
 

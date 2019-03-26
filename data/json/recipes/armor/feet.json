@@ -96,6 +96,18 @@
     ]
   },
   {
+    "result": "boots_bone",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_FEET",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": 40000,
+    "autolearn": true,
+    "using": [ [ "sewing_standard", 18 ] ],
+    "components": [ [ [ "bone", 18 ], [ "bone_human", 18 ], [ "bone_tainted", 36 ] ], [ [ "leather", 6 ], [ "fur", 6 ] ] ]
+  },
+  {
     "result": "boots_h20survivor",
     "type": "recipe",
     "category": "CC_ARMOR",

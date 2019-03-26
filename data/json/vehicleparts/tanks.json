@@ -96,6 +96,26 @@
     "size": 200000
   },
   {
+    "id": "roof_tank",
+    "copy-from": "external_tank_small",
+    "type": "vehicle_part",
+    "name": "roof-mounted tank (200L)",
+    "item": "55gal_drum",
+    "location": "on_roof",
+    "size": 200000,
+    "flags": [ "FLUIDTANK" ]
+  },
+  {
+    "id": "mounted_tank",
+    "copy-from": "external_tank_small",
+    "type": "vehicle_part",
+    "name": "mounted tank (200L)",
+    "item": "55gal_drum",
+    "location": "center",
+    "size": 200000,
+    "flags": [ "FLUIDTANK" ]
+  },
+  {
     "id": "tank_barrel",
     "type": "vehicle_part",
     "name": "barrel (100L)",

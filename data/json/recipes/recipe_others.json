@@ -206,6 +206,23 @@
   },
   {
     "type": "recipe",
+    "result": "sewing_kit",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "tailor",
+    "difficulty": 2,
+    "time": 15000,
+    "autolearn": true,
+    "tools": [ [ [ "mold_plastic", -1 ] ] ],
+    "components": [
+      [ [ "needle_wood", 1 ], [ "needle_bone", 1 ] ],
+      [ [ "thread", 50 ] ],
+      [ [ "scissors", 1 ] ],
+      [ [ "plastic_chunk", 2 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
     "result": "tailors_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",

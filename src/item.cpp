@@ -1145,6 +1145,35 @@ std::string item::info( std::vector<iteminfo> &info, const iteminfo_query *parts
                                _( "* On closer inspection, this appears to be <neutral>hallucinogenic</neutral>." ) );
         }
 
+        ///\EFFECT_SURVIVAL >=2 allows showing of health values
+        if( g->u.get_skill_level( skill_survival ) >= 2 ) {
+            int healthy = food_item->type->comestible->healthy;
+            std::string health_string = "";
+            if( healthy <= -10 ) {
+                health_string = "<bad>very unhealthy</bad>";
+            } else if( healthy <= -5 ) {
+                health_string = "<bad>unhealthy</bad>";
+            } else if( healthy <= -1 ) {
+                health_string = "<bad>bad for you</bad>";
+            } else if( healthy == 0 ) {
+                health_string = "<neutral>fine for you</neutral>";
+            } else if( healthy >= 1 && healthy < 3 ) {
+                health_string = "<good>good for you</good>";
+            } else if( healthy >= 3 && healthy < 5 ) {
+                health_string = "<good>healthy</good>";
+            } else if( healthy >= 5 && healthy < 7 ) {
+                health_string = "<good>quite healthy</good>";
+            } else if( healthy >= 7 ) {
+                health_string = "<good>very healthy</good>";
+            }
+            if( health_string != "" ) {
+                info.emplace_back( "DESCRIPTION",
+                                   string_format(
+                                       _( "* This food is %s." ),
+                                       health_string.c_str() ) );
+            }
+        }
+
         if( food_item->goes_bad() && parts->test( iteminfo_parts::FOOD_ROT ) ) {
             const std::string rot_time = to_string_clipped( food_item->type->comestible->spoils );
             info.emplace_back( "DESCRIPTION",

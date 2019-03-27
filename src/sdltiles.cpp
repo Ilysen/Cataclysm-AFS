@@ -2542,7 +2542,7 @@ void CheckMessages()
                 }
 
                 // Check if we're dead tired - if so, add sleep
-                if( g->u.get_fatigue() > DEAD_TIRED ) {
+                if( g->u.get_fatigue() > DRAINED ) {
                     actions.insert( ACTION_SLEEP );
                 }
 

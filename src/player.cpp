@@ -882,7 +882,7 @@ void player::update_mental_focus()
 
     // Fatigue should at least prevent high focus
     // This caps focus gain at 60(arbitrary value) if you're Dead Tired
-    if( get_fatigue() >= DEAD_TIRED && focus_pool > 60 ) {
+    if( get_fatigue() >= DRAINED && focus_pool > 60 ) {
         focus_pool = 60;
     }
 
@@ -4161,14 +4161,14 @@ void player::check_needs_extremes()
     }
 
     // Even if we're not Exhausted, we really should be feeling lack/sleep earlier
-    // Penalties start at Dead Tired and go from there
-    if( get_fatigue() >= DEAD_TIRED && !in_sleep_state() ) {
+    // Penalties start at Drained and go from there
+    if( get_fatigue() >= DRAINED && !in_sleep_state() ) {
         if( get_fatigue() >= 700 ) {
             if( calendar::once_every( 30_minutes ) ) {
-                add_msg_if_player( m_warning, _( "You're too physically tired to stop yawning." ) );
+                add_msg_if_player( m_warning, _( "You're too weary to stop yawning." ) );
                 add_effect( effect_lack_sleep, 30_minutes + 1_turns );
             }
-            /** @EFFECT_INT slightly decreases occurrence of short naps when dead tired */
+            /** @EFFECT_INT slightly decreases occurrence of short naps when drained */
             if( one_in( 50 + int_cur ) ) {
                 // Rivet's idea: look out for microsleeps!
                 fall_asleep( 5_turns );
@@ -4182,8 +4182,8 @@ void player::check_needs_extremes()
             if( one_in( 100 + int_cur ) ) {
                 fall_asleep( 5_turns );
             }
-        } else if( get_fatigue() >= DEAD_TIRED && calendar::once_every( 30_minutes ) ) {
-            add_msg_if_player( m_warning, _( "*yawn* You should really get some sleep." ) );
+        } else if( get_fatigue() >= DRAINED && calendar::once_every( 30_minutes ) ) {
+            add_msg_if_player( m_warning, _( "You should really get some sleep..." ) );
             add_effect( effect_lack_sleep, 30_minutes + 1_turns );
         }
     }
@@ -4196,11 +4196,11 @@ void player::check_needs_extremes()
         if( calendar::once_every( 60_minutes ) ) {
             if( sleep_deprivation < SLEEP_DEPRIVATION_MINOR ) {
                 add_msg_if_player( m_warning,
-                                   _( "Your mind feels tired. It's been a while since you've slept well." ) );
+                                   _( "It's been a while since you've slept well." ) );
                 mod_fatigue( 1 );
             } else if( sleep_deprivation < SLEEP_DEPRIVATION_SERIOUS ) {
                 add_msg_if_player( m_bad,
-                                   _( "Your mind feels foggy from lack of good sleep, and your eyes keep trying to close against your will." ) );
+                                   _( "Your eyes keep drifting closed when you stop paying attention." ) );
                 mod_fatigue( 5 );
 
                 if( one_in( 10 ) ) {
@@ -4208,7 +4208,7 @@ void player::check_needs_extremes()
                 }
             } else if( sleep_deprivation < SLEEP_DEPRIVATION_MAJOR ) {
                 add_msg_if_player( m_bad,
-                                   _( "Your mind feels weary, and you dread every wakeful minute that passes. You crave sleep, and feel like you're about to collapse." ) );
+                                   _( "You crave sleep, and feel like you're about to collapse..." ) );
                 mod_fatigue( 10 );
 
                 if( one_in( 5 ) ) {
@@ -4216,7 +4216,7 @@ void player::check_needs_extremes()
                 }
             } else if( sleep_deprivation < SLEEP_DEPRIVATION_MASSIVE ) {
                 add_msg_if_player( m_bad,
-                                   _( "You haven't slept decently for so long that your whole body is screaming for mercy. It's a miracle that you're still awake, but it just feels like a curse now." ) );
+                                   _( "Sleep... oh, God, please, sleep..." ) );
                 mod_fatigue( 40 );
 
                 mod_healthy_mod( -5, 0 );
@@ -4363,7 +4363,7 @@ void player::update_needs( int rate_multiplier )
         set_thirst( get_hunger() );
     }
 
-    const bool wasnt_fatigued = get_fatigue() <= DEAD_TIRED;
+    const bool wasnt_fatigued = get_fatigue() <= DRAINED;
     // Don't increase fatigue if sleeping or trying to sleep or if we're at the cap.
     if( get_fatigue() < 1050 && !asleep && !debug_ls ) {
         if( rates.fatigue > 0.0f ) {
@@ -4422,7 +4422,7 @@ void player::update_needs( int rate_multiplier )
 
                     // If we're just tired, we'll get a decent boost to our sleep quality.
                     // The opposite is true for very tired characters.
-                    if( get_fatigue() < DEAD_TIRED ) {
+                    if( get_fatigue() < DRAINED ) {
                         rest_modifier += 2;
                     } else if( get_fatigue() >= EXHAUSTED ) {
                         rest_modifier = ( rest_modifier > 2 ) ? rest_modifier - 2 : 1;
@@ -4434,7 +4434,7 @@ void player::update_needs( int rate_multiplier )
             }
         }
     }
-    if( is_player() && wasnt_fatigued && get_fatigue() > DEAD_TIRED && !lying ) {
+    if( is_player() && wasnt_fatigued && get_fatigue() > DRAINED && !lying ) {
         if( !activity ) {
             add_msg_if_player( m_warning, _( "You're feeling tired.  %s to lie down for sleep." ),
                                press_x( ACTION_SLEEP ) );
@@ -6330,7 +6330,7 @@ void player::mend( int rate_multiplier )
     // Bed rest speeds up mending
     if( has_effect( effect_sleep ) ) {
         healing_factor *= 4.0;
-    } else if( get_fatigue() > DEAD_TIRED ) {
+    } else if( get_fatigue() > DRAINED ) {
         // but being dead tired does not...
         healing_factor *= 0.75;
     } else {

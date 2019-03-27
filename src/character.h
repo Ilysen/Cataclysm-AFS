@@ -59,13 +59,13 @@ enum vision_modes {
 
 enum fatigue_levels {
     TIRED = 191,
-    DEAD_TIRED = 383,
+    DRAINED = 383,
     EXHAUSTED = 575,
     MASSIVE_FATIGUE = 1000
 };
 const std::unordered_map<std::string, fatigue_levels> fatigue_level_strs = { {
         { "TIRED", TIRED },
-        { "DEAD_TIRED", DEAD_TIRED },
+        { "DRAINED", DRAINED },
         { "EXHAUSTED", EXHAUSTED },
         { "MASSIVE_FATIGUE", MASSIVE_FATIGUE }
     }

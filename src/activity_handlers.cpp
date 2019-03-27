@@ -1974,7 +1974,7 @@ void activity_handlers::vibe_do_turn( player_activity *act, player *p )
             p->add_morale( MORALE_FEELING_GOOD, 1, 40 ); //twenty minutes to fill
         }
     }
-    if( p->get_fatigue() >= DEAD_TIRED ) { // Dead Tired: different kind of relaxation needed
+    if( p->get_fatigue() >= DRAINED ) { // Dead Tired: different kind of relaxation needed
         act->moves_left = 0;
         add_msg( m_info, _( "You're too tired to continue." ) );
     }

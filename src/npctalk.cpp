@@ -576,7 +576,7 @@ std::string dialogue::dynamic_line( const talk_topic &the_topic ) const
             std::string how_tired;
             if( p->get_fatigue() > EXHAUSTED ) {
                 how_tired = _( "Exhausted" );
-            } else if( p->get_fatigue() > DEAD_TIRED ) {
+            } else if( p->get_fatigue() > DRAINED ) {
                 how_tired = _( "Dead tired" );
             } else if( p->get_fatigue() > TIRED ) {
                 how_tired = _( "Tired" );

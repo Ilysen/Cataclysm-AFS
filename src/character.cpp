@@ -1924,7 +1924,10 @@ std::pair<std::string, nc_color> Character::get_thirst_description() const
     int thirst = get_thirst();
     std::string hydration_string;
     nc_color hydration_color = c_white;
-    if( thirst > 520 ) {
+    if( thirst > 800 ) {
+        hydration_color = c_red;
+        hydration_string = _( "Dessicated!" );
+    } else if( thirst > 520 ) {
         hydration_color = c_light_red;
         hydration_string = _( "Parched" );
     } else if( thirst > 240 ) {
@@ -1959,16 +1962,19 @@ std::pair<std::string, nc_color> Character::get_hunger_description() const
         hunger_string = _( "Starving!" );
     } else if( hunger >= 300 && get_starvation() > 1100 ) {
         hunger_color = c_light_red;
-        hunger_string = _( "Near starving" );
+        hunger_string = _( "Near-starving" );
     } else if( hunger > 250 ) {
         hunger_color = c_light_red;
         hunger_string = _( "Famished" );
-    } else if( hunger > 100 ) {
+    } else if( hunger > 150 ) {
         hunger_color = c_yellow;
         hunger_string = _( "Very hungry" );
-    } else if( hunger > 40 ) {
+    } else if( hunger > 100 ) {
         hunger_color = c_yellow;
         hunger_string = _( "Hungry" );
+    } else if( hunger > 50 ) {
+        hunger_color = c_yellow;
+        hunger_string = _( "Snackish" );
     } else if( hunger < -60 ) {
         hunger_color = c_green;
         hunger_string = _( "Engorged" );
@@ -1990,9 +1996,9 @@ std::pair<std::string, nc_color> Character::get_fatigue_description() const
     if( fatigue > EXHAUSTED ) {
         fatigue_color = c_red;
         fatigue_string = _( "Exhausted" );
-    } else if( fatigue > DEAD_TIRED ) {
+    } else if( fatigue > DRAINED ) {
         fatigue_color = c_light_red;
-        fatigue_string = _( "Dead Tired" );
+        fatigue_string = _( "Drained" );
     } else if( fatigue > TIRED ) {
         fatigue_color = c_yellow;
         fatigue_string = _( "Tired" );

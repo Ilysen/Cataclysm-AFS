@@ -1,8 +1,8 @@
 @echo off
 SETLOCAL
 
-cd ..\msvc-full-features
-echo Starting build...
+cd ..\..\msvc-full-features
+echo Done
 
 echo Generating "version.h"...
 for /F "tokens=*" %%i in ('git describe --tags --always --dirty --match "[0-9]*.*"') do set VERSION=%%i

@@ -9500,7 +9500,7 @@ int player::book_fun_for( const item &book, const player &p ) const
         book.typeId() == "cookbook_human" ) {
         fun_bonus = abs( fun_bonus );
     } else if( p.has_trait( trait_SPIRITUAL ) && book.has_flag( "INSPIRATIONAL" ) ) {
-        fun_bonus = abs( fun_bonus * 3 );
+        fun_bonus = abs( fun_bonus + 5 );
     }
     return fun_bonus;
 }
@@ -9785,7 +9785,7 @@ void player::do_read( item &book )
         }
         //It feels wrong to use a pointer to *this, but I can't find any other player pointers in this method.
         if( book_fun_for( book, *this ) != 0 ) {
-            add_msg( m_info, _( "Reading this book affects your morale by %d" ), book_fun_for( book, *this ) );
+            add_msg( m_info, _( "Reading this book affects your morale by %d." ), book_fun_for( book, *this ) );
         }
         add_msg( m_info, ngettext( "A chapter of this book takes %d minute to read.",
                                    "A chapter of this book takes %d minutes to read.", reading->time ),

@@ -1841,23 +1841,23 @@ std::string item::info( std::vector<iteminfo> &info, const iteminfo_query *parts
     if( is_book() ) {
         insert_separation_line();
         const auto &book = *type->book;
-        // Some things about a book you CAN tell by it's cover.
+        // Some things about a book you CAN tell by its cover.
         if( !book.skill && !type->can_use( "MA_MANUAL" ) && parts->test( iteminfo_parts::BOOK_SUMMARY ) ) {
             info.push_back( iteminfo( "BOOK", _( "Just for fun." ) ) );
         }
         if( type->can_use( "MA_MANUAL" ) && parts->test( iteminfo_parts::BOOK_SUMMARY ) ) {
             info.push_back( iteminfo( "BOOK",
-                                      _( "Some sort of <info>martial arts training manual</info>." ) ) );
+                                      _( "This book will <info>teach you a martial art</info>." ) ) );
         }
         if( book.req == 0 && parts->test( iteminfo_parts::BOOK_REQUIREMENTS_BEGINNER ) ) {
             info.push_back( iteminfo( "BOOK", _( "It can be <info>understood by beginners</info>." ) ) );
         }
-        if( g->u.has_identified( typeId() ) ) {
+        if( g->u.has_identified( typeId() ) || g->u.has_trait( trait_id( "LOVES_BOOKS" ) ) ) {
             if( book.skill ) {
                 if( g->u.get_skill_level_object( book.skill ).can_train() &&
                     parts->test( iteminfo_parts::BOOK_SKILLRANGE_MAX ) ) {
                     auto fmt = string_format(
-                                   _( "Can bring your <info>%s skill to</info> <num>" ),
+                                   _( "Can bring your <info>%s skill to</info> <num>." ),
                                    book.skill.obj().name() );
                     info.push_back( iteminfo( "BOOK", "", fmt, iteminfo::no_flags, book.level ) );
                 }
@@ -1878,7 +1878,7 @@ std::string item::info( std::vector<iteminfo> &info, const iteminfo_query *parts
             }
             if( g->u.book_fun_for( *this, g->u ) != 0 && parts->test( iteminfo_parts::BOOK_MORALECHANGE ) ) {
                 info.push_back( iteminfo( "BOOK", "",
-                                          _( "Reading this book affects your morale by <num>" ),
+                                          _( "Reading this book affects your morale by <num>." ),
                                           iteminfo::show_plus, g->u.book_fun_for( *this, g->u ) ) );
             }
             if( parts->test( iteminfo_parts::BOOK_TIMEPERCHAPTER ) ) {

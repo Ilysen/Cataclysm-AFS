@@ -303,7 +303,7 @@ std::vector<std::string> clothing_flags_description( const item &worn_item )
         description_stack.push_back( _( "It has pockets." ) );
     }
     if( worn_item.has_flag( "neoprene_padded" ) ) {
-        description_stack.push_back( _( "It protects from the rain.." ) );
+        description_stack.push_back( _( "It protects from the rain." ) );
     }
     if( worn_item.has_flag( "WATERPROOF" ) ) {
         description_stack.push_back( _( "It is waterproof." ) );

@@ -6080,7 +6080,8 @@
       ["bio_dopamine_stimulators", 10],
       ["bio_linguistic_coprocessor", 10],
       ["bio_grenade_launcher", 10],
-      ["bio_solar_panels", 10]
+      ["bio_solar_panels", 10],
+      ["bio_sleep", 10]
     ]
   },{
     "type" : "item_group",
@@ -6102,7 +6103,8 @@
       ["bio_watch", 10],
       ["bio_torsionratchet", 10],
       ["bio_cable", 10],
-      ["bio_solar_panels", 10]
+      ["bio_solar_panels", 10],
+      ["bio_sleep", 10]
     ]
   },{
     "type" : "item_group",
@@ -6454,7 +6456,8 @@
       ["bio_meteorologist", 10],
       ["bio_cable", 10],
       ["bio_weight", 10],
-      ["bio_grenade_launcher", 10]
+      ["bio_grenade_launcher", 10],
+      ["bio_sleep", 10]
     ]
   },{
       "type" : "item_group",
@@ -9163,7 +9166,8 @@
       ["bio_adrenaline", 20],
       ["bio_ods", 10],
       ["bio_weight", 15],
-      ["bio_dopamine_stimulators", 20]
+      ["bio_dopamine_stimulators", 20],
+      ["bio_sleep", 15]
     ]
   },{
     "type" : "item_group",

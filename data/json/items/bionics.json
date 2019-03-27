@@ -999,6 +999,16 @@
     "difficulty": 5
   },
   {
+    "id": "bio_sleep",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "//": "The idea for this was more or less taken from thquinn on github; I just thought it was cool.  Thank you!",
+    "name": "Sopoforic Module CBM",
+    "description": "A microscopic electrode designed to gently stimulate a particular cluster of neurons in your hypothalamus.  While powered, you will be able to fall asleep as soon as you try, no matter the circumstances.",
+    "price": 100000,
+    "difficulty": 2
+  },
+  {
     "id": "bio_nostril",
     "copy-from": "bionic_general_faulty",
     "type": "BIONIC_ITEM",

@@ -94,6 +94,7 @@ const efftype_id effect_alarm_clock( "alarm_clock" );
 const efftype_id effect_asthma( "asthma" );
 const efftype_id effect_attention( "attention" );
 const efftype_id effect_bandaged( "bandaged" );
+const efftype_id effect_bionic_rejection( "bionic_rejection" );
 const efftype_id effect_bite( "bite" );
 const efftype_id effect_blind( "blind" );
 const efftype_id effect_blisters( "blisters" );
@@ -212,6 +213,7 @@ static const bionic_id bio_purifier( "bio_purifier" );
 static const bionic_id bio_reactor( "bio_reactor" );
 static const bionic_id bio_recycler( "bio_recycler" );
 static const bionic_id bio_shakes( "bio_shakes" );
+static const bionic_id bio_sleep( "bio_sleep" );
 static const bionic_id bio_sleepy( "bio_sleepy" );
 static const bionic_id bio_solar_panels( "bio_solar_panels" );
 static const bionic_id bio_spasm( "bio_spasm" );
@@ -10308,6 +10310,11 @@ int player::sleep_spot( const tripoint &p ) const
 
 bool player::can_sleep()
 {
+    if( has_active_bionic( bio_sleep ) && power_level >= 1 ) {
+        charge_power( -1 );
+        add_msg_if_player( m_good, _( "Your sopoforic module fires, and you're asleep instantly." ) );
+        return true;
+    }
     if( has_effect( effect_meth ) ) {
         // Sleep ain't happening until that meth wears off completely.
         return false;

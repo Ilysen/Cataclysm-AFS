@@ -1156,5 +1156,13 @@
     "//": "Check items/guns/40mm.json.",
     "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "NO_UNWIELD" ],
     "act_cost": 5
+  },
+  {
+    "id": "bio_sleep",
+    "type": "bionic",
+    "name": "Sopoforic Module",
+    "description": "An electrode has been implanted into your brain's ventrolateral preoptic nucleus.  While active, a very small amount of power will be drained when you lie down to sleep that stimulates the area, instantly putting you to sleep, regardless of where you are.",
+    "occupied_bodyparts": [ [ "HEAD", 1 ] ],
+    "flags": [ "BIONIC_TOGGLED" ]
   }
 ]

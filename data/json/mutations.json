@@ -5811,6 +5811,28 @@
   },
   {
     "type": "mutation",
+    "id": "BIONIC_REJECTION",
+    "name": "Cybernetic Rejection",
+    "changes_to": [ "BIONIC_REFUSAL" ],
+    "category": [ "ALPHA" ],
+    "points": -3,
+    "valid": false,
+    "starting_trait": true,
+    "description": "Whether physical or mental, your body just can't handle bionic implants, and has an intense negative reaction to them.  Installing bionics will cause severe negative side effects, scaling with the complexity of the bionic."
+  },
+  {
+    "type": "mutation",
+    "id": "BIONIC_REFUSAL",
+    "name": "Cybernetic Refusal",
+    "points": -5,
+    "category": [ "ALPHA" ],
+    "threshreq": [ "THRESH_ALPHA" ],
+    "prereqs": [ "BIONIC_REJECTION" ],
+    "valid": false,
+    "description": "Whether because your anatomy no longer supports them, or because a change in mental chemistry makes it as such, trying to install any bionics other than what you have installed already is immensely painful and will seriously mess you up."
+  },
+  {
+    "type": "mutation",
     "id": "PROF_POLICE",
     "name": "Police Officer",
     "points": 0,

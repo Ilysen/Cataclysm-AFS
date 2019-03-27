@@ -44,6 +44,7 @@ const skill_id skilll_computer( "computer" );
 const efftype_id effect_adrenaline( "adrenaline" );
 const efftype_id effect_adrenaline_mycus( "adrenaline_mycus" );
 const efftype_id effect_asthma( "asthma" );
+const efftype_id effect_bionic_rejection( "bionic_rejection" );
 const efftype_id effect_bleed( "bleed" );
 const efftype_id effect_bloodworms( "bloodworms" );
 const efftype_id effect_brainworms( "brainworms" );
@@ -1042,6 +1043,17 @@ bool player::install_bionics( const itype &type, player &installer, bool autodoc
             return false;
         }
     }
+    if( has_trait( trait_id( "BIONIC_REJECTION" ) ) ) {
+        if( !g->u.query_yn(
+                _( "Your body and mind will react intensely! Continue anyway?" ) ) ) {
+            return false;
+        }
+    } else if( has_trait( trait_id( "BIONIC_REFUSAL" ) ) ) {
+        if( !g->u.query_yn(
+                _( "This is a REALLY bad idea. Continue anyway?" ) ) ) {
+            return false;
+        }
+    }
 
     // Practice skills only if conducting manual installation
     if( !autodoc ) {
@@ -1060,11 +1072,23 @@ bool player::install_bionics( const itype &type, player &installer, bool autodoc
         if( bioid->upgraded_bionic ) {
             remove_bionic( bioid->upgraded_bionic );
             //~ %1$s - name of the bionic to be upgraded (inferior), %2$s - name of the upgraded bionic (superior).
-            add_msg( m_good, _( "Successfully upgraded %1$s to %2$s." ),
-                     bioid->upgraded_bionic->name.c_str(), bioid->name.c_str() );
         } else {
             //~ %s - name of the bionic.
             add_msg( m_good, _( "Successfully installed %s." ), bioid->name.c_str() );
+            if( has_trait( trait_id( "BIONIC_REJECTION" ) ) ) {
+                add_msg( m_good, _( "Successfully installed %s." ), bioid->name.c_str() );
+                mod_pain( 5 * difficult );
+                add_effect( effect_bionic_rejection, ( rng( 12_hours, 24_hours ) * difficult ) );
+            } else if( has_trait( trait_id( "BIONIC_REFUSAL" ) ) ) {
+                add_msg( m_mixed, _( "Successfully inst- AAAAAAAAAAAAAAHH!!" ) );
+                mod_pain( 20 * difficult );
+                hurtall( rng( 30, 80 ), this );
+                add_msg( m_bad, _( "You pass out from the pain..." ) );
+                fall_asleep( 1_hours );
+                add_effect( effect_bionic_rejection, 48_hours * difficult );
+            } else {
+                add_msg( m_good, _( "Successfully installed %s." ), bioid->name.c_str() );
+            }
         }
 
         add_bionic( bioid );

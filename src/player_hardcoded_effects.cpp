@@ -32,6 +32,7 @@ const efftype_id effect_alarm_clock( "alarm_clock" );
 const efftype_id effect_antibiotic( "antibiotic" );
 const efftype_id effect_asthma( "asthma" );
 const efftype_id effect_attention( "attention" );
+const efftype_id effect_bionic_rejection( "bionic_rejection" );
 const efftype_id effect_bite( "bite" );
 const efftype_id effect_bleed( "bleed" );
 const efftype_id effect_blind( "blind" );
@@ -279,6 +280,32 @@ static void eff_fun_hallu( player &u, effect &it )
         }
     }
 }
+static void eff_fun_bionic_rejection( player &u, effect &it )
+{
+    if( u.focus_pool >= 100 ) {
+        u.focus_pool = 100; // Can't focus with this horrible *THING* in our body
+    }
+    if( one_in( 1024 ) && !u.in_sleep_state() ) {
+        u.add_msg_if_player( m_bad,
+                             _( "You scratch and claw at your body, trying to get that awful bionic out..." ) );
+        u.mod_pain( rng( 1, 3 ) );
+        u.moves -= 100;
+        body_part bp = random_body_part( true );
+        ///\EFFECT_INT decreases chance of bionic reject
+        if( one_in( u.int_cur ) ) {
+            u.add_msg_if_player( m_bad, _( "You tear open your skin with your nails!" ) );
+            u.mod_pain( 5 );
+            u.add_effect( effect_bleed, 1_minutes, bp );
+        } else {
+            u.add_msg_if_player( m_bad, _( "It hurts!  It hurts!  Get it OUT!" ) );
+            u.apply_damage( nullptr, bp, 1 );
+        }
+    } else if( one_in( 512 ) ) {
+        u.add_msg_if_player( m_bad, _( "Your bionic aches with discomfort." ) );
+        u.mod_pain( 1 );
+        u.focus_pool -= 1;
+    }
+}
 
 struct temperature_effect {
     int str_pen;
@@ -433,6 +460,7 @@ void player::hardcoded_effects( effect &it )
             { effect_cold, eff_fun_cold },
             { effect_hot, eff_fun_hot },
             { effect_frostbite, eff_fun_frostbite },
+            { effect_bionic_rejection, eff_fun_bionic_rejection },
         }
     };
     const efftype_id &id = it.get_id();
@@ -1099,7 +1127,8 @@ void player::hardcoded_effects( effect &it )
         if( !is_blind() && !has_effect( effect_narcosis ) ) {
             if( !has_trait(
                     trait_id( "SEESLEEP" ) ) ||
-                has_effect( effect_meditation ) ) { // People who can see while sleeping are acclimated to the light.
+                has_effect(
+                    effect_meditation ) ) { // People who can see while sleeping are acclimated to the light.
                 if( has_trait( trait_id( "HEAVYSLEEPER2" ) ) && !has_trait( trait_id( "HIBERNATE" ) ) ) {
                     // So you can too sleep through noon
                     if( ( tirednessVal * 1.25 ) < g->m.ambient_light_at( pos() ) && ( get_fatigue() < 10 ||

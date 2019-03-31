@@ -38,7 +38,7 @@ Some code distributed with the project is not part of the project and is release
 
 ## Community
 
-Nothing yet!
+*Official Discord server:* https://discord.gg/v2MM6Zj
 
 ## Frequently Asked Questions
 

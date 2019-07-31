@@ -1,3 +1,9 @@
+# DISCLAIMER
+
+*"Best advice I was ever given? "Ticker, you'll be a lot happier once you stop caring about the opinions of a culture that is beneath you." I learned my worth, learned the places and people that matter. Opened my eyes."*
+
+I've moved on from Cataclysm, and no longer work on Aftershock. I'm keeping this repository open for archival purposes, and because some folks may want to pick up the torch in the future.
+
 # Cataclysm: Aftershock
 
 Cataclysm: Aftershock - or just Aftershock - is a turn-based, permadeath roguelike game set in the wake of a global disaster in the near future resulting in the downfall of modern civlization. As one of the few surviving humans left in the world, you'll improvise tools from scraps, pillage the remains of cities and towns to find supplies, and carve a live for yourself amongst the ashes. Along the way, you might find hallmarks of the old civilization: nuclear cars, cybernetic implants, and, perhaps, in the dusty and forgotten halls of a science laboratory, answers to why all this happened.
